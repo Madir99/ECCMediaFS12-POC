@@ -9,8 +9,8 @@ ECC Media Filesystem (EMFS) is a filesystem with an ECC feature based on Extende
 - [ ] Add support for directories
 - [ ] Develop a filesystem checker (utilizing ECC for checking and fixing)
 - [ ] Implement variable node size (currently fixed at 512 bytes)
-- [ ] Explore and implement compression (Consider a custom algorithm; if pursued, it may become a separate GitHub project)
-- [ ] Code cleanup
+- [ ] Implement compression (Consider using a custom algorithm; if a custom algorithm is chosen, develop it as a separate GitHub project)
+- [ ] General code cleanup
 - [ ] Create a Linux driver (to be developed as a separate GitHub project)
 
 
@@ -49,12 +49,12 @@ This filesystem, ECCMediaFS12 (EMFS12), offers several distinctions from the tra
 | Filesystem Type                 | File Allocation Table   | Node chain           |
 
 **Notes:**
-- Both file systems were tested on media with a size of 1,474,560 bytes (floppy disk).
+- Both file systems were tested on media with a size of 1 474 560 bytes (floppy disk).
 - FAT12 used in this comparison was formatted with a cluster size of 512 bytes, and other values were kept in default.
 - *Value can be modified during formatting.
 
 **Conclusion:**
-EMFS12 introduces ECC support and a simpler structure compared to FAT12. While FAT12 supports features such as file dates & times, long file names support, and variable cluster sizes (not yet implemented in EMFS12), EMFS12 focuses on data integrity and ease of use.
+EMFS12 introduces ECC support compared to FAT12. While FAT12 supports features such as file dates & times, long file names support, and variable cluster sizes (not yet implemented in EMFS12), EMFS12 focuses on data integrity.
 
 ---
 
