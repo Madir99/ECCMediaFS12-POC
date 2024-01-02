@@ -10,7 +10,7 @@ ECC Media Filesystem (EMFS) is a filesystem with an ECC feature based on Extende
 - [ ] Develop a filesystem checker (utilizing ECC for checking and fixing)
 - [ ] Implement variable node size (currently fixed at 512 bytes)
 - [ ] Implement compression (Consider using a custom algorithm; if a custom algorithm is chosen, develop it as a separate GitHub project)
-- [ ] General code cleanup
+- [ ] General code & struct cleanup (May break already formated drives)
 - [ ] Create a Linux driver (to be developed as a separate GitHub project)
 
 
@@ -67,3 +67,5 @@ This project is licensed under the [GNU AGPLv3](LICENSE).
 ## Acknowledgments
 
 - Special thanks to [ChatGPT](https://www.openai.com/) for helping me with creating this README.md.
+- With updates that break already formated drives may or may not came out FS conversion program.
+- I am taking break from development generaly for while because I have to do stuff to school.
