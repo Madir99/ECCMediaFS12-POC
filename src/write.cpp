@@ -41,8 +41,8 @@ int main(int argc, char ** argv) {
 	}
 
 	//convert file name to root dir entry name value
-	uint8_t den[11];
-	for (uint8_t i = 0; i < 11;i++) den[i] = 0x20;
+	BYTE den[11];
+	for (BYTE i = 0; i < 11;i++) den[i] = 0x20;
 	if (fx) {
 		memcpy(den, fn, fx - fn - 1);
 		memcpy(den + 8, fx, strlen(fx));
@@ -101,7 +101,7 @@ int main(int argc, char ** argv) {
 	directoryEntry dev[27];
 	memcpy(&dev, &(de.Data), 486);
 	QWORD used = 0;
-	for (uint8_t i = 0; i < 27; i++) {
+	for (BYTE i = 0; i < 27; i++) {
 		used += (dev[i].Size + 499) / 500;
 		if (!memcmp(dev[i].Name, den, 11)) {
 			cerr << "File exists" << endl;
@@ -121,7 +121,7 @@ int main(int argc, char ** argv) {
 	}
 
 	//get first free node
-	uint16_t firstNode = 1;
+	WORD firstNode = 1;
 	nodeEntry node;
 	if (readNode(disk, node)) {
 		free(dataD);
@@ -139,7 +139,7 @@ int main(int argc, char ** argv) {
 	}
 
 	//modify root dir entry
-	for (uint8_t i = 0; i < 27; i ++) {
+	for (BYTE i = 0; i < 27; i ++) {
 		if (dev[i].FirstNode == 0 && dev[i].Attributes != 0x08) {
 			dev[i].FirstNode = firstNode;
 			dev[i].Size = (DWORD)fileS;
