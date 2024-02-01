@@ -17,7 +17,7 @@ int main(int argc, char ** argv) {
 	disk.read(reinterpret_cast<char*>(&bs), 512);
 
 	if (memcmp(bs.vi.fsType, fsType, 8)) {
-		cerr << "EMFD12 is not detected" << endl;
+		cerr << "EMFS12 is not detected" << endl;
 		disk.close();
 		return -2;
 	}

@@ -5,7 +5,7 @@
 #include "common/typedef.hpp"
 
 using namespace std;
-const char fsType[9] = "EMFD12  ";
+const char fsType[9] = "EMFS12  ";
 
 BYTE bootJump[3] = { 0xeb, 0x29, 0x90 };
 

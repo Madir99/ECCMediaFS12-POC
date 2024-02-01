@@ -10,14 +10,14 @@ int main(int argc, char * argv[]) {
 		return -1;
 	}
 
-	if (argc > 4) {
-		if (atoi(argv[4]) < 2) {
+	if (argc > 3) {
+		if (atoi(argv[3]) < 2) {
 			cerr << "Minimal size in nodes is 2" << endl;
 			return -1;
 		}
 	}
 
-	if (argc > 5) {
+	if (argc > 4) {
 		ifstream bootSector(argv[4], ios::binary);
 		if (!bootSector.is_open()) {
 			cerr << "Cannot open boot sector file " << argv[4] << endl;
