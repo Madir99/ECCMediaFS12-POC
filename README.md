@@ -68,4 +68,3 @@ This project is licensed under the [GNU AGPLv3](LICENSE).
 
 - Special thanks to [ChatGPT](https://www.openai.com/) for helping me with creating this README.md.
 - With updates that break already formated drives may or may not came out FS conversion program.
-- I am taking break from development generaly for while because I have to do stuff to school.
